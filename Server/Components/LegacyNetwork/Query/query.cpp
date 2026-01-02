@@ -109,7 +109,7 @@ void Query::buildServerInfoBuffer()
 	writeToBuffer(output, offset, static_cast<uint8_t>('i'));
 	writeToBuffer(output, offset, static_cast<uint8_t>(passworded));
 	writeToBuffer(output, offset, static_cast<uint16_t>(core->getPlayers().players().size()));
-	writeToBuffer(output, offset, static_cast<uint16_t>(maxPlayers - core->getPlayers().bots().size()));
+	writeToBuffer(output, offset, static_cast<uint16_t>(maxPlayers));
 
 	// Write server name
 	writeToBuffer(output, offset, serverNameLength);
