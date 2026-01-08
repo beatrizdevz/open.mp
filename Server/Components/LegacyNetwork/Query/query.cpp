@@ -175,7 +175,7 @@ void Query::updateServerInfoBufferPlayerCount(IPlayer* except)
 		size_t offset = BASE_QUERY_SIZE + sizeof(uint8_t);
 		uint16_t playerCount = (except && !except->isBot()) ? core->getPlayers().players().size() - 1 : core->getPlayers().players().size();
 		assert(playerCount <= maxPlayers);
-		uint16_t realPlayers = maxPlayers - core->getPlayers().bots().size();
+		uint16_t realPlayers = maxPlayers
 		if (except && except->isBot())
 		{
 			++realPlayers;
